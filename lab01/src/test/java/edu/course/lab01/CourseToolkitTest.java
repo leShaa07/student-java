@@ -145,4 +145,20 @@ class CourseToolkitTest {
 
         assertArrayEquals(copy, values);
     }
+
+    @Test
+    void returnsTrueForLargestIntPrime() {
+        assertTrue(CourseToolkit.isPrime(Integer.MAX_VALUE));
+    }
+
+    @Test
+    void returnsTrueForOddLengthPalindrome() {
+        assertTrue(CourseToolkit.isPalindrome("aba"));
+    }
+
+    @Test
+    void averageDoesNotOverflowOnLargeValues() {
+        double result = CourseToolkit.average(new int[]{Integer.MAX_VALUE, Integer.MAX_VALUE});
+        assertEquals(Integer.MAX_VALUE, result, 1e-9);
+    }
 }

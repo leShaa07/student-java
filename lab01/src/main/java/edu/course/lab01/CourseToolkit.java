@@ -13,7 +13,7 @@ public final class CourseToolkit {
         if (num < 2) {
             return false;
         }
-        for (int div = 2; div * div <= num; div++) {
+        for (int div = 2; (long) div * div <= num; div++) {
             if (num % div == 0) {
                 return false;
             }
